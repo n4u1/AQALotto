@@ -38,12 +38,12 @@ public class MainActivity extends AppCompatActivity {
 
                     try {
                         for (int j = 0; j < 6; j++) {
-                            while (integerArrayList.get(j) == num && integerArrayList.get(j) == 0) {
+                            while (integerArrayList.get(j) == num || integerArrayList.get(j) == 0) {
                                 num = random.nextInt(46);
                             }
                         }
                     } catch (Exception e) {
-                        e.printStackTrace();
+
                     }
 
                     integerArrayList.add(i, num);
@@ -57,6 +57,8 @@ public class MainActivity extends AppCompatActivity {
                 textView4.setText(String.valueOf(integerArrayList.get(3)));
                 textView5.setText(String.valueOf(integerArrayList.get(4)));
                 textView6.setText(String.valueOf(integerArrayList.get(5)));
+
+                integerArrayList.clear();
 
 
             }
